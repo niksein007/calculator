@@ -83,6 +83,7 @@
         'one two three add minus'
         'zero zero dot add equals '
     ;
+    grid-gap: 1px;
 
     width: 80vw;
     margin: auto;
