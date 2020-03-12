@@ -5,76 +5,81 @@ import Cal from './components/calDisplay'
 
 class App extends React.Component {
  state ={
- display:'',
- hold:'',
+ display:"",
  secondDisplay:"",
  sign:""
  }
-   maths =(event)=>{
-     //get element by its textcontent
-    const clicked = event.target.textContent
-    console.log(clicked)
-    switch (clicked) {
-      case "+":
+
+ logic=()=>{
+  let sign = this.state.SeconDisplay
+  if (sign === "+" || sign === "-" || sign === "/" || sign === "*" ) {
+   console.log(`mark`)
+    
+  }
+  
+ 
+}
+   maths=(event)=>{
+     //used getAttribue because value is not a predefined attribute of a div tag
+     let value = event.target.getAttribute("value")
+   
+    //  console.log(value)
+  this.logic()
+
+     switch (value) {
+       case "+":
         case "-":
           case "*":
             case "/":
-              //using tenary operator
-              this.state.sign ==="" ?
         this.setState((prevstate)=>{
-          return{ hold:parseFloat(prevstate.display),
-                  secondDisplay:prevstate.display + clicked,
-                  display:"",
-                  sign:clicked
+          return{
+            sign:value,
+            secondDisplay:prevstate.display + value,
+            display:""
+          
           }
         })
-        : 
-this.setState((prevstate)=>{
-          return{ hold:parseFloat(prevstate.display),
-                  secondDisplay:prevstate.display + clicked,
-                  display:"",
-                  sign:clicked
-          }
-        })
-
-        break;
-        case "=":
+         break;
+         case "equals":
           this.setState((prevstate)=>{
-            return{ 
+            return{
               secondDisplay:prevstate.secondDisplay + prevstate.display,
-              display:eval( prevstate.hold + prevstate.sign + (prevstate.display))
+              display:eval(prevstate.secondDisplay + prevstate.display)
+            
             }
           })
-        break;
+         break;
 
-        case "clear":
-          this.setState((prevstate)=>{
-            return{ hold:null,
-                    secondDisplay:"",
-                    display:"",
-                    sign:""
-            }
-          }) 
-        break;
+         case "clear":
+           this.setState({
+            display:"",
+            secondDisplay:"",
+            sign:""
+           })
+         break;
 
-        case this.state.secondDisplay + this.state.display  :
-          console.log(clicked)
-        break;
-        
-    
-      default:
+         case "display":
+          //do notting when display is selected
+         break;
+     
+       default:
         this.setState((prevstate)=>{
-          return {display:  prevstate.display + clicked}
-          
-         })
-        break;
-    }
-   
-}
+          return {
+            display:prevstate.display + value
+          }
+        })
+         break;
+     }
 
+   }
+    
 
   render(){
-    // console.log(this.state.hold)
+    
+    // console.log(this.state.sign)
+    console.log((this.state.secondDisplay))
+    // console.log(parseFloat(this.state.display))
+
   return (
     <div className="App">
      <Cal maths={this.maths}
