@@ -1,9 +1,8 @@
 {
 	"name": "calculator",
 	"version": "0.1.0",
-  "private": true,
-  "homepage": "https://niksein007.github.io/calculator",
-
+	"private": true,
+	"homepage": "https://niksein007.github.io/calculator",
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.4.1",
@@ -16,15 +15,23 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy" :"npm run build",
-    "deploy":"gh-pages -d build"
+		"eject": "react-scripts eject",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [ ">0.2%", "not dead", "not op_mini all" ],
-		"development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }
