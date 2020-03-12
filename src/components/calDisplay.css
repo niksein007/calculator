@@ -102,6 +102,7 @@
 
 .box:hover {
     background-color: cadetblue;
+    cursor: pointer;
 }
 #box-add{
     /* padding: 20% 0; */
