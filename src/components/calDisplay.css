@@ -1,70 +1,70 @@
-#box-0 {
+.box-0 {
     grid-area: zero;
 }
 
-#box-1 {
+.box-1 {
     grid-area: one;
 }
 
-#box-2 {
+.box-2 {
     grid-area: two;
 }
 
-#box-3 {
+.box-3 {
     grid-area: three;
 }
 
-#box-4 {
+.box-4 {
     grid-area: four;
 }
 
-#box-5 {
+.box-5 {
     grid-area: five;
 }
 
-#box-6 {
+.box-6 {
     grid-area: six;
 }
 
-#box-7 {
+.box-7 {
     grid-area: seven;
 }
 
-#box-8 {
+.box-8 {
     grid-area: eight;
 }
 
-#box-9 {
+.box-9 {
     grid-area: nine;
 }
-#box-dot {
+.box-dot {
     grid-area: dot;
 }
 
-#box-add {
+.box-add {
     grid-area: add;
 }
 
-#box-minus {
+.box-minus {
     grid-area: minus;
 }
 
-#box-multiply {
+.box-multiply {
     grid-area: multiply;
 }
 
-#box-division {
+.box-division {
     grid-area: divide;
 }
 
-#box-clear {
+.box-clear {
     grid-area: clear;
 }
 
-#box-display {
+.box-display {
     grid-area: display;
 }
-#box-equals {
+.box-equals {
     grid-area: equals;
 }
 
@@ -103,17 +103,17 @@
 .box:hover {
     background-color: cadetblue;
 }
-#box-add{
+.box-add{
     /* padding: 20% 0; */
     font-size: xx-large;
 }
-#box-minus, .box-dot, .box-multiply{
+.box-minus, .box-dot, .box-multiply{
     font-size: x-large;
 }
 /* .box-0, .box-equals{
  padding: 40px 0;
 } */
-#box-display{
+.box-display{
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -122,7 +122,7 @@
     height:50px;
     font-size: 30px;
 }
-#box-display:hover{
+.box-display:hover{
     background-color: floralwhite;
 }
 #first{
