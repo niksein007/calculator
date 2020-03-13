@@ -10,21 +10,16 @@ class App extends React.Component {
  sign:""
  }
 
- logic=()=>{
-  let sign = this.state.SeconDisplay
-  if (sign === "+" || sign === "-" || sign === "/" || sign === "*" ) {
-   console.log(`mark`)
-    
-  }
+
   
  
-}
+
    maths=(event)=>{
+     
      //used getAttribue because value is not a predefined attribute of a div tag
      let value = event.target.getAttribute("value")
    
     //  console.log(value)
-  this.logic()
 
      switch (value) {
        case "+":
@@ -41,13 +36,22 @@ class App extends React.Component {
         })
          break;
          case "equals":
+           let firstInput = parseFloat(this.state.secondDisplay)
+           firstInput =isNaN(firstInput)
+          //  let secondInput = parseFloat(this.state.display)
+          firstInput ? this.setState({
+            display:"",
+                secondDisplay:"",
+                sign:""
+          }):
+           
           this.setState((prevstate)=>{
             return{
               secondDisplay:prevstate.secondDisplay + prevstate.display,
-              display:eval(prevstate.secondDisplay + prevstate.display)
-            
-            }
-          })
+              display:parseFloat(prevstate.secondDisplay) + parseFloat(prevstate.display)
+          }
+        }
+          )
          break;
 
          case "clear":
