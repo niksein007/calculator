@@ -38,7 +38,6 @@ class App extends React.Component {
          case "equals":
            let firstInput = parseFloat(this.state.secondDisplay)
            firstInput =isNaN(firstInput)
-          //  let secondInput = parseFloat(this.state.display)
           firstInput ? this.setState({
             display:"",
                 secondDisplay:"",
@@ -79,11 +78,6 @@ class App extends React.Component {
     
 
   render(){
-    
-    // console.log(this.state.sign)
-    console.log((this.state.secondDisplay))
-    // console.log(parseFloat(this.state.display))
-
   return (
     <div className="App">
      <Cal maths={this.maths}
