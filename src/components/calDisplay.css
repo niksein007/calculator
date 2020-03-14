@@ -143,14 +143,20 @@
 .box-display:hover{
     background-color: floralwhite;
 }
+
+.box span{
+    display: inline-block;
+    height: 35px;
+}
 #first{
+    
 align-self: flex-end;
 margin-bottom: -10px;
 }
 #second{
     align-self: flex-start;
     color: brown;  
-    margin-top: -10px;
+    margin-top: -15px;
     font-size: 20px;
 }
 
