@@ -41,8 +41,8 @@ class App extends React.Component {
               return {
                 secondDisplay: prevstate.secondDisplay + prevstate.display,
                 display:
-                  parseFloat(prevstate.secondDisplay) +
-                  parseFloat(prevstate.display)
+                    eval (parseFloat(prevstate.secondDisplay) + prevstate.sign + parseFloat(prevstate.display))
+                  
               };
             });
         break;
